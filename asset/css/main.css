@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Lớp chứa giới hạn chiều rộng */
+.app {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header full-width */
+.header {
+    width: 100vw; /* Chiều rộng toàn bộ màn hình */
+    background-color: #fff;
+    color: #fff;
+    padding: 10px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Căn giữa logo và nav */
+    gap: 30px; /* Khoảng cách giữa logo và nav */
+}
+
+/* Logo */
+.header__logo img {
+    max-width: 100px;
+    height: auto;
+}
+
+/* Navbar */
+.header__navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px; /* Khoảng cách giữa logo và menu */
+}
+
+.header__navbar-list {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Khoảng cách giữa các mục menu */
+    margin: 0; /* Đảm bảo không có khoảng cách thêm ở các danh sách */
+    padding: 0; /* Loại bỏ khoảng cách mặc định */
+}
+
+/* Subnav */
+.subnav {
+    display: none; /* Ẩn subnav theo mặc định */
+    position: absolute; /* Đặt vị trí tuyệt đối để nó nằm bên dưới menu chính */
+    background-color: #fff; /* Màu nền trắng cho subnav */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng cho subnav */
+    border-radius: 5px; /* Bo góc cho subnav */
+    padding: 10px 0; /* Khoảng cách bên trong */
+    z-index: 10; /* Đặt z-index để subnav nổi bật hơn các phần tử khác */
+    min-width: 100px; /* Chiều rộng tối thiểu */
+    width: auto; /* Chiều rộng tự động cho subnav */
+}
+
+/* Hiển thị subnav khi hover lên mục cha */
+.header__navbar-list li:hover .subnav {
+    display: block; /* Hiển thị subnav khi hover */
+}
+
+/* Liên kết trong subnav */
+.subnav li {
+    display: block; /* Hiển thị các mục dưới dạng block */
+    margin: 5px 0; /* Khoảng cách giữa các mục trong subnav */
+}
+
+/* Các liên kết trong subnav */
+.subnav a {
+    padding: 8px 15px; /* Khoảng cách bên trong cho các liên kết */
+    color: #333; /* Màu chữ cho liên kết */
+    font-weight: 500; /* Đậm chữ cho liên kết */
+    transition: background-color 0.3s, color 0.3s; /* Hiệu ứng chuyển đổi cho màu nền và màu chữ */
+    text-decoration: none; /* Loại bỏ gạch chân */
+    white-space: nowrap; /* Ngăn ngừa ngắt dòng trong các liên kết */
+}
+
+.subnav a:hover {
+    background-color: #f0f0f0; /* Đổi màu nền khi hover */
+    color: #000; /* Đổi màu chữ khi hover */
+}
+
+/* Thêm một số hiệu ứng cho subnav */
+.header__navbar-list li {
+    position: relative; /* Cần để subnav hiển thị đúng */
+}
+
+/* Đảm bảo các mục trong navbar chính cũng có hover hiệu ứng */
+.header__navbar-list a {
+    text-decoration: none;
+    color: #7d6363;
+    font-size: 16px; /* Đặt kích thước chữ hợp lý */
+    padding: 5px 10px;
+    transition: background-color 0.3s, color 0.3s; /* Hiệu ứng chuyển đổi cho màu nền và màu chữ */
+    font-weight: 600; /* Làm chữ đậm hơn */
+}
+
+.header__navbar-list a:hover {
+    background-color: #bbbbbb;
+    border-radius: 5px;
+    color: #fff; /* Đổi màu chữ khi hover */
+}
+
+/* Đảm bảo các mục trong navbar chính cũng có hover hiệu ứng */
+.header__navbar-list a {
+    text-decoration: none;
+    color: #7d6363;
+    font-size: 16px; /* Đặt kích thước chữ hợp lý */
+    padding: 5px 10px;
+    transition: background-color 0.3s, color 0.3s; /* Hiệu ứng chuyển đổi cho màu nền và màu chữ */
+    font-weight: 600; /* Làm chữ đậm hơn */
+}
+
+.header__navbar-list a:hover {
+    background-color: #bbbbbb;
+    border-radius: 5px;
+    color: #fff; /* Đổi màu chữ khi hover */
+}
+
+.header__navbar-list li {
+    display: inline; /* Hiển thị các mục trong hàng ngang */
+}
+
+/* Liên kết trong menu */
+.header__navbar-list a {
+    text-decoration: none;
+    color: #7d6363;
+    font-size: 16px; /* Đặt kích thước chữ hợp lý */
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+    font-weight: 600; /* Làm chữ đậm hơn */
+}
+
+.header__navbar-list a:hover {
+    background-color: #bbbbbb;
+    border-radius: 5px;
+    color: #fff; /* Đổi màu chữ khi hover */
+}
+
+/* List không có dấu chấm */
+.list__unstyled {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;  
+    gap: 15px; /* Khoảng cách giữa các phần tử */
+    margin: 0;
+    padding: 0;
+}
+
+/* Liên kết trong list unstyled */
+.list__unstyled li {
+    display: inline;
+}
+
+.list__unstyled a {
+    text-decoration: none;
+    color: #333; /* Màu chữ mặc định */
+    font-weight: 500; /* Làm chữ đậm hơn */
+    transition: color 0.3s ease;
+}
+
+.list__unstyled a:hover {
+    color: #828e92; /* Đổi màu khi hover */
+}
+
+.slider {
+    padding-top: 50%;
+    background: url(../img/banner2.jpg) top center / cover no-repeat;
+}
