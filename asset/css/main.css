@@ -10,11 +10,6 @@ body {
     background-color: #f4f4f4;
 }
 
-/* Lớp chứa giới hạn chiều rộng */
-.app {
-    max-width: 1200px;
-    margin: 0 auto;
-}
 
 /* Header full-width */
 .header {
@@ -176,4 +171,52 @@ body {
 .slider {
     padding-top: 50%;
     background: url(../img/banner2.jpg) top center / cover no-repeat;
+}
+
+.container {
+    background-color: #fff;
+}
+.content__section {
+    margin: auto;
+    padding: 30px;
+    display: flex;
+    flex-direction: row; /* Sắp xếp theo hàng ngang */
+    justify-content: space-between; /* Căn đều khoảng cách giữa văn bản và ảnh */
+    max-width: 1200px;
+    background-color: #fff;
+}
+
+.text-content {
+    flex: 1; /* Văn bản chiếm khoảng 70-80% diện tích */
+    margin-right: 20px;
+}
+
+.content__section img {
+    max-width: 35%; /* Ảnh chiếm 35% diện tích */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section__heading {
+    font-size: 14px;
+    color: #000000;;
+}
+
+.section__sub-heading {
+    margin-top: 40px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.text-underline {
+    text-decoration: underline;
+    font-style: ;
+    font-weight: 700;
+}
+
+.section__about-text {
+    margin-top: 10px;
+    line-height: 1.6;
+    font-size: 16px;
 }
