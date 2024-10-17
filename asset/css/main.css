@@ -13,7 +13,7 @@ body {
 
 /* Header full-width */
 .header {
-    width: 100vw; /* Chiều rộng toàn bộ màn hình */
+    width: 100%; /* Chiều rộng toàn bộ màn hình */
     background-color: #fff;
     color: #fff;
     padding: 10px 50px;
@@ -21,6 +21,8 @@ body {
     align-items: center;
     justify-content: center; /* Căn giữa logo và nav */
     gap: 30px; /* Khoảng cách giữa logo và nav */
+    position: fixed;
+    top:0;
 }
 
 /* Logo */
@@ -50,7 +52,6 @@ body {
     display: none; /* Ẩn subnav theo mặc định */
     position: absolute; /* Đặt vị trí tuyệt đối để nó nằm bên dưới menu chính */
     background-color: #fff; /* Màu nền trắng cho subnav */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng cho subnav */
     border-radius: 5px; /* Bo góc cho subnav */
     padding: 10px 0; /* Khoảng cách bên trong */
     z-index: 10; /* Đặt z-index để subnav nổi bật hơn các phần tử khác */
@@ -169,9 +170,11 @@ body {
 }
 
 .slider {
-    padding-top: 50%;
+    height: calc(100vh - 95px);
     background: url(../img/banner2.jpg) top center / cover no-repeat;
-}
+    max-width: 100%;
+    margin-top: 95px;
+}   
 
 .container {
     background-color: #fff;
@@ -219,4 +222,36 @@ body {
     margin-top: 10px;
     line-height: 1.6;
     font-size: 16px;
+}
+
+/* slideShow */
+
+.wrapper-slide {
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-show {
+    width: 500px;
+    overflow: hidden;
+    position: relative;
+}
+
+.list-image {
+    display: flex;
+    transition: 0.5s;
+}
+
+.list-image img {
+    width: 100%;
+}
+
+.btn {
+    font-size: 40px;
+    color: #999;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
